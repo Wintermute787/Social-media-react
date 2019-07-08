@@ -17,6 +17,7 @@ class App extends React.Component{
         const newMasterYourStatusList = this.state.masterYourStatusList.slice();
         newMasterYourStatusList.push(newStatus);
         this.setState({masterYourStatusList: newMasterYourStatusList})
+        console.log(newMasterYourStatusList);
     }
     render() {
         return (

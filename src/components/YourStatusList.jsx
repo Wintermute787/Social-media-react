@@ -8,7 +8,6 @@ function YourStatusList(props) {
 
     return(
         <div>
-            <hr/>
             {props.yourStatusList.map((statuses)=>
                 <Status names={statuses.names}
                         time = {statuses.time}

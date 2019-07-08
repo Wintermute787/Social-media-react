@@ -5,8 +5,7 @@ function Status(props) {
         <div>
 
             <h3>{props.time} - {props.names}</h3>
-            <p><em>{props.status}</em></p>
-            <hr/>
+            <p>{props.status}</p>
         </div>
     );
 }
