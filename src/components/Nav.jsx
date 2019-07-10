@@ -7,13 +7,13 @@ import Jerk1 from './assets/jerk1.jpeg'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+
 const NavWrapper = styled.div `
     height: 12em;
     color: white;
     font-size: 1.3em;
     background: linear-gradient(45deg, #000428,#004e92);
     display: flex;
-    border-radius: 20px;
     align-items: flex-end;
     justify-content: space-around;
     box-shadow: 0 8px 6px -6px black;
@@ -27,14 +27,14 @@ const NavButton = styled.div`
     justify-content: space-around;
     width: 100%;
     margin-left: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 150;
     text-transform: uppercase;
     color: white;
 `
 const TextAnimation = styled.a`
     transition: all .2s;
-    border-top: 1px solid white;
+  
         :hover {
             transform: scale(1.1);
         }
@@ -85,9 +85,9 @@ export default (Nav) => {
         <TitleText>FootBook</TitleText>
         <NavWrapper>
             <NavButton>
-                <TextAnimation><Link to="/">Home</Link></TextAnimation>
-                <TextAnimation><Link to='/newstatus'>Profile</Link></TextAnimation>
-                <TextAnimation><Link to="/newstatus">New</Link></TextAnimation>
+                <TextAnimation><Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link></TextAnimation>
+                <TextAnimation><Link to='/newstatus' style={{ textDecoration: 'none', color: 'white' }}>Profile</Link></TextAnimation>
+                <TextAnimation><Link to="/" style={{ textDecoration: 'none', color: 'white' }}>New</Link></TextAnimation>
             </NavButton>
             </NavWrapper>
         <div style={navImage}></div>

@@ -7,6 +7,7 @@ import App from "./components/App";
 import { HashRouter} from "react-router-dom";
 
 
+
 const render = (Component) => {
     ReactDOM.render(
         // eslint-disable-next-line react/jsx-no-undef

@@ -2,14 +2,15 @@ import React from "react";
 import Status from "./YourProf";
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Moment from 'moment';
+
 
 const Wrapper = styled.div`
-height: 60rem;
-background: linear-gradient(45deg, #BBB9B9,#F8F8F8);
-opacity: 0.5;
-    width: 100%;
-    box-shadow: 5px 5px 20px;
+    border: 1px solid black;
+    width: 75%;
+    height: 8em;
+    margin-left: 3rem;
+    padding: 2rem;
+    margin-top: 1rem;
 `
 
 function YourStatusList(props) {
@@ -21,14 +22,14 @@ function YourStatusList(props) {
     }
     formatTime();
     return(
-       <div>
+       <Wrapper>
             {props.yourStatusList.map((statuses)=>
                 <Status names={statuses.names}
                         formattedWaitTime = {statuses.formattedWaitTime}
                         status={statuses.status}
                         key={statuses.id}/>
             )}
-       </div>
+       </Wrapper>
     )
 }
 

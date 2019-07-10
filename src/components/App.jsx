@@ -6,13 +6,16 @@ import styled from 'styled-components';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import YourStatusList from "./YourStatusList";
 import NewStatusControl from './NewStatusControl'
+import FriendsStatus from './HomePage'
+import Ads from './Ads';
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr 
-    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 3fr 1fr 
+    grid-gap: 1rem;
     margin-top: 9rem;
     justify-items: center;
+    max-height: 100vh;
 `
 
 class App extends React.Component{
@@ -52,12 +55,14 @@ class App extends React.Component{
             <BrowserRouter>
                 <div>
                     <Nav/>
+                    <Ads/>
                     <Grid>
                     <Info/>
                     <Switch>
                         
-                        <Route exact path='/' render={() =><YourStatusList yourStatusList={this.state.masterYourStatusList}/>} />
+                        <Route exact path='/' render={() =><FriendsStatus/>} />
                         <Route path='/newstatus' render={()=><NewStatusControl onNewStatusCreation={this.handleAddingNewStatusToList}/>} />
+                        
                     </Switch>
                     <Friends/>
              </Grid>
